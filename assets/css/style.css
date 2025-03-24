@@ -1,0 +1,123 @@
+:root{
+    --amarillo: hsl(47, 88%, 63%);  
+    --blanco:  hsl(0, 0%, 100%);
+    --gris500: hsl(0, 0%, 42%);
+    --gris950: hsl(0, 0%, 7%);
+    --fuente: "Figtree", sans-serif;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-padding-top: 0rem;
+    font-family: var(--fuente);
+}
+*,*:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    background-color: var(--amarillo);
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor{
+    background-color: var(--blanco);
+    width: 32rem;
+    box-shadow: 10px 10px var(--gris950);
+    height: 50rem;
+    border: 2px solid var(--gris500);
+    border-radius: 1rem;
+    padding: 2rem;
+}
+/*Cambios en el .contenedor cuando rebase los 375px*/
+@media (min-width: 376px){
+    .contenedor{
+        height: 52rem;
+        width: 38rem;
+        border-radius: 1.7rem;
+        padding: 2.5rem 2.3rem;
+    }
+}
+
+.contenedor__imagen{
+    height: 20.5rem;
+    border-radius: 1rem;
+    background-image: url(/assets/images/illustration-article.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/*Cambios en el .contenedor__imagen cuando rebase los 375px*/
+@media (min-width: 376px){
+    .contenedor__imagen{
+        height: 20rem;
+    }
+}
+
+.contenedor__etiqueta{
+    background-color: var(--amarillo);
+    font-weight: bold;
+    font-size: 1.3rem;
+    display: inline-block;
+    padding: .5rem 1rem;
+    margin-top: 2rem;
+    border-radius: .5rem;
+}
+
+/*Cambios en el .contenedor__etiqueta cuando rebase los 375px*/
+@media (min-width: 376px){
+    .contenedor__etiqueta{
+        font-size: 1.5rem;
+        padding: .3rem 1rem;
+        margin-top: 2.5rem;
+    }
+}
+
+.contenedor__fecha{
+    font-size: 1.2rem;
+    margin-top: -0.1rem;
+}
+@media (min-width: 376px){
+    .contenedor__fecha{
+        margin-top: -0.3rem;
+        font-size: 1.4rem;
+    }
+}
+
+.contenedor__titulo{
+    font-weight: bold;
+}
+@media (min-width: 376px){
+    .contenedor__titulo{
+        font-size: 2.4rem;
+        margin-top: -0.5rem;
+    }
+}
+
+.contenedor__texto{
+    font-size: 1.4rem;
+    margin-top: -0.3rem;
+}
+
+@media (min-width: 376px){
+    .contenedor__texto{
+        font-size: 1.6rem;
+    }
+}
+
+.footer{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.footer__avatar{
+    width: 3.2rem;
+    height: 3.2rem;
+}
+.footer__nombre{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
